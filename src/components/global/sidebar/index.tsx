@@ -5,6 +5,9 @@ import { LogoSmall } from "@/svgs/logo-small"
 import Items from "./items"
 import { Separator } from "@/components/ui/separator"
 import { HelpDuoToneWhite } from "@/icons"
+import ClerkAuthState from "../clerk-auth-state"
+import SubscriptionPlan from "../subscription-plan"
+import UpgradeCard from "./upgrade"
 
 
 
@@ -36,7 +39,7 @@ export default function Sidebar({slug}:Props){
         </div>
         <div className="px-3 flex flex-col gap-y-5">
           <div className="flex gap-x-2">
-            {/* <ClerkAuthState /> */}
+            <ClerkAuthState />
             <p className="text-[#9B9CA0]">Profile</p>
           </div>
           <div className="flex gap-x-3">
@@ -44,11 +47,11 @@ export default function Sidebar({slug}:Props){
             <p className="text-[#9B9CA0]">Help</p>
           </div>
         </div>
-        {/* <SubscriptionPlan type="FREE"> */}
+        <SubscriptionPlan type="FREE">
           <div className="flex-1 flex flex-col justify-end">
-            {/* <UpgradeCard /> */}
+            <UpgradeCard />
           </div>
-        {/* </SubscriptionPlan> */}
+        </SubscriptionPlan>
       </div>
     </div>
     )
